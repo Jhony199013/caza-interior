@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --color-bg-primary: #0e0e0f;
+  --color-bg-secondary: #1a1a1c;
+  --color-text-primary: #eaeaea;
+  --color-divider: #2e2e31;
+  --color-accent: #c7afa2;
+  --color-accent-hover: #e1c9bc;
+}
+
+html,
+body {
+  min-height: 100%;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body), "Inter", system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-primary);
+}
+
+h1 {
+  font-family: var(--font-manrope), var(--font-heading), "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+h2 {
+  font-family: var(--font-manrope), var(--font-heading), "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+h3,
+h4,
+button,
+input,
+textarea {
+  font-family: var(--font-body), "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 600;
+}
+
+p,
+span,
+li {
+  font-family: var(--font-body), "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes camera-pan-up {
+  0% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(-2%);
+  }
+}
+
+@keyframes camera-pan-down {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(2%);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+.animate-fade-in-delayed {
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes reset-position {
+  from {
+    transform: var(--current-transform, translateY(0));
+  }
+  to {
+    transform: translateY(2%);
+  }
+}
+
+@keyframes reset-position-down {
+  from {
+    transform: var(--current-transform, translateY(0));
+  }
+  to {
+    transform: translateY(-2%);
+  }
+}
+
+.animate-camera-pan-up {
+  animation: camera-pan-up 6s ease-in-out infinite alternate;
+}
+
+.animate-camera-pan-down {
+  animation: camera-pan-down 6s ease-in-out infinite alternate;
+}
+
+.animate-reset-position {
+  animation: reset-position 1s ease-in-out forwards;
+}
+
+.animate-reset-position-down {
+  animation: reset-position-down 1s ease-in-out forwards;
+}
+
+
