@@ -73,6 +73,8 @@ const AboutStudio = () => {
           sizes="(min-width: 768px) 45vw, 100vw"
           priority
         />
+        {/* Общее затемнение фото */}
+        <div className="absolute inset-0 bg-[#0E0E0F]/40" />
       </div>
       
       {/* Плавная градация затемнения слева */}
