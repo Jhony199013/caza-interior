@@ -127,4 +127,10 @@ a {
   animation: reset-position-down 1s ease-in-out forwards;
 }
 
+@media (min-width: 768px) {
+  .clip-path-diagonal {
+    clip-path: polygon(0 0, 50% 0, 30% 100%, 0 100%);
+  }
+}
+
 
